@@ -1,0 +1,39 @@
+#calculator{
+  border: 5px solid rgb(253, 7, 183);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+#Display{
+   font-size: 16px;
+   height: 30px;
+   width: 85%;
+   margin: 10px;
+   border: 3px solid red;
+   border-radius: 10px;
+   margin-top:-5px ;
+   text-align: right;
+   padding: 5px;
+}
+
+.buttons{
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    background-color: greenyellow;
+    border: 3px Solid rgb(252, 7, 7);
+    border-radius: 10px;
+    color: rgb(7, 7, 7);
+    font-weight: bolder;
+}
+h3{
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid red;
+    color: white;
+}

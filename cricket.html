@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <H1>BAT BALL STUMPS GAME</H1>
+    <p>Developed By : Sameer Mushtaq</p>
+    <button onclick="
+         let computerChoice = computerMove();
+         let resultMsg = result('Bat',computerChoice);
+         showResult('Bat', computerChoice , resultMsg);
+         document.querySelector('#disply').value=showResult('Bat', computerChoice , resultMsg)">Bat</button>
+
+    <button onclick="
+         computerChoice = computerMove();
+         resultMsg = result('Ball',computerChoice);
+         showResult('Ball', computerChoice , resultMsg);
+         document.querySelector('#disply').value=showResult('Ball', computerChoice , resultMsg)">Ball</button>
+
+    <button onclick="
+         computerChoice = computerMove();
+         resultMsg = result('Stumps',computerChoice);
+         showResult('Stumps', computerChoice , resultMsg);
+         document.querySelector('#disply').value=showResult('Stumps', computerChoice , resultMsg)">Stump</button><br>
+
+    <script>
+        let score = {
+            Win: 0,
+            Lost: 0,
+            Tie: 0,
+        };
+
+
+        function computerMove() {
+            let random = Math.random() * 3;
+            if (random <= 1) {
+                return 'Bat';
+            } else if (random <= 2) {
+                return 'Ball';
+            } else {
+                return 'Stumps';
+            }
+        }
+
+        function result(userMove, computerMove) {
+            if (userMove === 'Bat') {
+                if (computerMove === 'Bat') {
+                    socre.Tie++;
+                    return 'It is a Tie';
+                } else if (computerMove === 'Ball') {
+                    score.Win++;
+                    return 'You won';
+                } else {
+                    score.Lost++;
+                    return 'Computer Win';
+                }
+            } else if (userMove === 'Ball') {
+                if (computerMove === 'Bat') {
+                    score.Lost++;
+                    return 'Computer Win';
+                } else if (computerMove === 'Ball') {
+                    socre.Tie++;
+                    return 'It is a Tie';
+                } else {
+                    score.Win++;
+                    return 'You Won';
+                }
+            } else if (userMove === 'Stumps') {
+                if (computerMove === 'Bat') {
+                    score.Win++;
+                    return 'You Won';
+                } else if (computerMove === 'Ball') {
+                    score.Lost++;
+                    return 'Computer Win';
+                } else {
+                    socre.Tie++;
+                    return 'It is A tie';
+                }
+            }
+        }
+
+        function showResult(userMove, computerMove, result) {
+            alert(`You have choosen ${userMove} :
+             Computer Choose ${computerMove}: 
+            
+            ${result}
+
+            You Won ${score.Win} times
+            Computer Win ${score.Lost} times
+            Tie ${score.Tie} `);
+        }
+    </script>
+</body>
+
+</html>

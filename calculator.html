@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator">
+        <h3>Sameer's Calculator</h3>
+        <input type="text" id="Display" readonly>
+        <button class="buttons" onclick="result=result+'1';
+        document.querySelector('#Display').value=result;">1</button>
+        <button class="buttons" onclick="result=result+'2';
+        document.querySelector('#Display').value=result;">2</button>
+        <button class="buttons" onclick="result=result+'3';
+        document.querySelector('#Display').value=result;">3</button>
+        <button class="buttons" onclick="result=result+'4';
+        document.querySelector('#Display').value=result;">4</button>
+        <button class="buttons" onclick="result=result+'5';
+        document.querySelector('#Display').value=result;">5</button>
+        <button class="buttons" onclick="result=result+'6';
+        document.querySelector('#Display').value=result;">6</button>
+        <button class="buttons" onclick="result=result+'7';
+        document.querySelector('#Display').value=result;">7</button>
+        <button class="buttons" onclick="result=result+'8';
+        document.querySelector('#Display').value=result;">8</button>
+        <button class="buttons" onclick="result=result+'9';
+        document.querySelector('#Display').value=result;">9</button>
+        <button class="buttons" onclick="result=result+'+';
+        document.querySelector('#Display').value=result;">+</button>
+        <button class="buttons" onclick="result=result+'0';
+        document.querySelector('#Display').value=result;">0</button>
+        <button class="buttons" onclick="result=result+'-';
+        document.querySelector('#Display').value=result;">-</button>
+        <button class="buttons" onclick="result=result+'/';
+        document.querySelector('#Display').value=result;">/</button>
+        <button class="buttons" onclick="result=result+'*';
+        document.querySelector('#Display').value=result;">*</button>
+        <button class="buttons" onclick="result='';
+         document.querySelector('#Display').value=result;">C</button>
+        <button class="buttons" onclick="result=result+'.';
+        document.querySelector('#Display').value=result;">.</button>
+        <button class="buttons" onclick="result= eval(result);
+        document.querySelector('#Display').value=result;">=</button>
+        </div>
+
+        <script>
+            let result = '';
+            document.querySelector('#Display').value = result ;
+        </script>
+</body>
+</html>

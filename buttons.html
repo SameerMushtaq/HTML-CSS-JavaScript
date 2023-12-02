@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="buttons.css">
+</head>
+
+<body>
+    <header id="header">
+        <li>Home</li>
+        <li>Services</li>
+        <li>About Us</li>
+        <li>Contact</li>
+    </header>
+    <main id="full">
+        <form id="myForm" name="myForm" method="Post" onsubmit="return validateForm()">
+
+            Name : <input type="text" name="name" id="name"><span class="span" id="nerror"></span><br>
+            Email : <input type="email" name="email" id="email"><span class="span" id="eerror"></span><br>
+            Phone : <input type="number" name="phone" id="phone"><span id="perror" class="span"></span><br>
+
+            <input type="submit">
+        </form>
+    </main>
+    <script>
+        function validateForm() {
+            let returnval = true;
+
+            let name = document.forms["myForm"]["name"].value;
+            if (name == "") {
+                error("name", "* Please enter your Name");
+                returnval = false;
+            }
+        }
+
+        function error(id, message) {
+            element = document.getElementById(id);
+            element.getElementsByClassName['span'][0].innerText = message;
+        }
+    </script>
+</body>
+
+</html>

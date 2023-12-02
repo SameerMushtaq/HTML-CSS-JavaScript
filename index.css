@@ -1,0 +1,22 @@
+#Add{
+    background-color: greenyellow;
+    width: auto;
+    height: 35px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#remove{
+   background-color: red; 
+   width: auto;
+    height: 35px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#dele{
+    background-color: rgb(147, 142, 142); 
+    width: auto;
+     height: 35px;
+     border-radius: 10px;
+     font-weight: bold;
+}
